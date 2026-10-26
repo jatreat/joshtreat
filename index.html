@@ -3,71 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Josh Treat</title>
+<title>Josh Treat · Campaign manager and political strategist</title>
 <meta name="description" content="Joshua A. Treat is a campaign manager and political strategist who has run state and federal races since 2013. Based in Lincolnville, Maine.">
 <link rel="canonical" href="https://joshtreat.com/">
 <meta property="og:title" content="Josh Treat">
 <meta property="og:description" content="Campaign manager and political strategist. State and federal races since 2013.">
 <meta property="og:type" content="profile">
+<meta name="theme-color" content="#14213D">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Joshua A. Treat","alternateName":"Josh Treat","url":"https://joshtreat.com/","jobTitle":"Campaign manager and political strategist","address":{"@type":"PostalAddress","addressLocality":"Lincolnville","addressRegion":"ME","addressCountry":"US"},"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Maine"},"sameAs":["https://www.linkedin.com/in/joshtreat","https://www.strava.com/athletes/142055860","https://www.instagram.com/jatreat89/","https://x.com/jatreat","https://www.facebook.com/share/19ZPJny1hU/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;600&family=Cinzel:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Cinzel:wght@600&display=swap">
 <style>
-/* Layout: a letterhead. Name at the top, one strong column of text, a narrow rail of facts. */
+/* Two typefaces with a reason: Caslon, the face the Declaration was first printed in, for names and headings;
+   Public Sans, the U.S. government's web typeface, for everything you read or press.
+   The one bold idea: a results board drawn like election-night returns. Everything else stays quiet. */
 :root {
-  --paper: #F7F6F2;      /* an off-white that isn't cream */
-  --ink: #1C2229;        /* navy-black */
-  --mute: #5B6670;
-  --rule: #D5D7D3;
-  --navy: #1F3A5F;       /* the accent: the one real color on the page */
-  --navy-2: #2E5586;
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --navy: #14213D;      /* from the badge */
+  --navy-2: #22355E;
+  --gold: #D6A740;      /* from the badge's rings */
+  --gold-ink: #8A6516;  /* gold dark enough to read on white */
+  --ink: #18202B;
+  --slate: #4B5768;
+  --mist: #EEF1F5;      /* cool grey surface, not cream */
+  --rule: #D8DEE6;
+  --white: #FFFFFF;
+  --display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+  --serif: "Libre Caslon Text", Georgia, serif;
+  --sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --paper: #15191E; --ink: #E6E4DE; --mute: #A3ACB4; --rule: #333B43; --navy: #8DB1E0; --navy-2: #A9C4EA; color-scheme: dark; }
-}
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.0625rem; line-height: 1.6; }
-a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: var(--navy-2); }
-:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
-.wrap { max-width: 64rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
-header { padding-block: 2.5rem 2rem; border-bottom: 1px solid var(--rule); }
-.head { display: flex; align-items: center; gap: 1.75rem; }
-.badge { width: 7rem; height: 7rem; flex: 0 0 auto; }
-@media (max-width: 36rem) { .head { align-items: flex-start; gap: 1.1rem; } .badge { width: 5rem; height: 5rem; } }
-header h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2.2rem, 1.4rem + 3vw, 3.4rem); line-height: 1.05; margin: 0 0 .6rem; letter-spacing: -0.01em; }
-header .role { font-family: var(--sans); font-size: 1.1rem; color: var(--mute); margin: 0; }
-main { display: grid; gap: 2.5rem 4rem; padding-block: 2.5rem 3rem; }
-@media (min-width: 52rem) { main { grid-template-columns: minmax(0, 1fr) 17rem; } }
-.prose { max-width: 62ch; min-width: 0; }
-.prose p + p { margin-top: 1em; }
-.prose h2 { font-family: var(--sans); font-weight: 600; font-size: .95rem; letter-spacing: .04em; text-transform: uppercase; color: var(--mute); margin: 2.4rem 0 .8rem; }
-.prose h2:first-child { margin-top: 0; }
-.work { list-style: none; margin: 0; padding: 0; }
-.work li { padding: .9rem 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 7.5rem 1fr; gap: .25rem 1.25rem; }
-.work li:last-child { border-bottom: 1px solid var(--rule); }
-.work .when { font-family: var(--sans); color: var(--mute); font-size: .95rem; font-variant-numeric: tabular-nums; padding-top: .15rem; }
-.work b { font-weight: 600; }
-.work p { margin: .2rem 0 0; font-size: 1rem; }
-@media (max-width: 36rem) { .work li { grid-template-columns: 1fr; } }
-aside { font-family: var(--sans); font-size: .97rem; min-width: 0; }
-aside dl { margin: 0; }
-aside dt { color: var(--mute); font-size: .85rem; margin-top: 1rem; }
-aside dt:first-child { margin-top: 0; }
-aside dd { margin: .1rem 0 0; }
-.btn { display: inline-block; font-family: var(--sans); font-weight: 600; color: var(--paper); background: var(--navy); text-decoration: none; padding: .6rem 1rem; margin-top: 1.5rem; }
-.btn:hover { background: var(--navy-2); color: var(--paper); }
-.copy { font: inherit; color: var(--navy); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
-footer { border-top: 1px solid var(--rule); padding-block: 1.5rem 2.5rem; font-family: var(--sans); font-size: .9rem; color: var(--mute); }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--navy-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--gold-ink); }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: 72rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: -999px; top: 0; background: var(--gold); color: var(--navy); padding: .5rem 1rem; z-index: 10; }
+.skip:focus { left: 1rem; }
+
+/* Top bar */
+.bar-top { position: sticky; top: 0; z-index: 5; background: rgba(20,33,61,.96); backdrop-filter: saturate(1.4) blur(8px); -webkit-backdrop-filter: saturate(1.4) blur(8px); border-bottom: 1px solid rgba(214,167,64,.35); }
+.bar-top .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: 3.75rem; }
+.mark { display: flex; align-items: center; gap: .65rem; color: var(--white); text-decoration: none; font-family: var(--serif); font-size: 1.15rem; }
+.mark img { width: 1.6rem; height: auto; display: block; }
+.mark:hover { color: var(--white); }
+.bar-top nav { margin-left: auto; display: flex; align-items: center; gap: 1.6rem; }
+.bar-top nav a { color: #C9D2E0; text-decoration: none; font-size: .95rem; font-weight: 500; }
+.bar-top nav a:hover { color: var(--white); }
+.bar-top nav a.cta { color: var(--navy); background: var(--gold); padding: .45rem .9rem; border-radius: 3px; font-weight: 600; }
+.bar-top nav a.cta:hover { background: #E4BC62; color: var(--navy); }
+@media (max-width: 44rem) { .bar-top nav a:not(.cta) { display: none; } }
+
+/* Hero */
+.hero { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: auto 0 0 0; height: 4px; background: var(--gold); }
+.hero .wrap { display: grid; gap: 2.5rem; align-items: center; padding-block: clamp(3rem, 2rem + 5vw, 6.5rem) clamp(3.5rem, 2rem + 5vw, 6.5rem); }
+@media (min-width: 56rem) { .hero .wrap { grid-template-columns: minmax(0, 1fr) 21rem; gap: 4rem; } }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3.4rem, 2rem + 7vw, 6.6rem); line-height: .95; letter-spacing: -0.015em; margin: 0 0 1.4rem; }
+.hero .title { font-size: clamp(1.2rem, 1rem + .8vw, 1.5rem); line-height: 1.4; color: #E6EAF1; max-width: 32ch; margin: 0 0 1rem; font-weight: 400; }
+.hero .where { color: #A9B5C8; margin: 0 0 2rem; font-size: 1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--sans); font-weight: 600; font-size: 1rem; text-decoration: none; padding: .8rem 1.25rem; border-radius: 3px; border: 1px solid transparent; cursor: pointer; line-height: 1.2; }
+.btn svg { width: 1.05em; height: 1.05em; flex: 0 0 auto; }
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: #E4BC62; color: var(--navy); }
+.btn-line { background: transparent; color: var(--white); border-color: rgba(255,255,255,.45); }
+.btn-line:hover { border-color: var(--white); color: var(--white); background: rgba(255,255,255,.06); }
+.badge { width: 100%; max-width: 21rem; height: auto; display: block; justify-self: center; filter: drop-shadow(0 10px 30px rgba(0,0,0,.35)); }
+@media (max-width: 55.99rem) { .badge { display: none; } }
+
+/* Sections */
+section { padding-block: clamp(3.5rem, 2.5rem + 3vw, 5.5rem); }
+section.alt { background: var(--mist); }
+.sec-head { display: grid; gap: .5rem; margin-bottom: 2.2rem; max-width: 46rem; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 1.5rem + 2vw, 2.8rem); line-height: 1.1; margin: 0; color: var(--navy); letter-spacing: -0.01em; }
+.sec-head p { margin: 0; color: var(--slate); font-size: 1.1rem; }
+
+/* Results board */
+.board { border-top: 2px solid var(--navy); }
+.race { display: grid; gap: .9rem 2.5rem; padding: 1.6rem 0; border-bottom: 1px solid var(--rule); }
+@media (min-width: 52rem) { .race { grid-template-columns: 16rem minmax(0, 1fr); } }
+.race .yr { font-family: var(--sans); font-weight: 700; color: var(--gold-ink); font-variant-numeric: tabular-nums; font-size: .95rem; }
+.race h3 { font-family: var(--serif); font-weight: 700; font-size: 1.2rem; line-height: 1.3; margin: .15rem 0 .3rem; color: var(--navy); }
+.race .role { color: var(--slate); font-size: .95rem; margin: 0; }
+.tally { display: grid; gap: .45rem; }
+.row { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr) 3.6rem; align-items: center; gap: .75rem; font-size: .95rem; }
+.row .who { color: var(--ink); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row.them .who { color: var(--slate); font-weight: 400; }
+.track { height: .85rem; background: #E3E8EF; border-radius: 2px; overflow: hidden; }
+.fill { display: block; height: 100%; width: var(--w); background: var(--navy); }
+.row.them .fill { background: #A5AFBD; }
+.row .pct { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--navy); }
+.row.them .pct { color: var(--slate); font-weight: 500; }
+.race .note { margin: .5rem 0 0; color: var(--ink); }
+.race .note b { color: var(--navy); }
+html.js .fill { width: 0; transition: width 1.1s cubic-bezier(.2,.7,.2,1); }
+html.js .race.in .fill { width: var(--w); }
+html.js .race.in .row.them .fill { transition-delay: .15s; }
+@media (prefers-reduced-motion: reduce) { html.js .fill { transition: none; width: var(--w); } }
+.fine { color: var(--slate); font-size: .9rem; margin: 1.2rem 0 0; }
+
+/* About */
+.about { display: grid; gap: 2rem 4rem; }
+@media (min-width: 56rem) { .about { grid-template-columns: minmax(0, 1fr) 20rem; } }
+.about .prose { font-family: var(--serif); font-size: 1.12rem; line-height: 1.75; max-width: 62ch; }
+.about .prose p { margin: 0 0 1.1em; }
+.about .prose p:first-child { font-size: 1.3rem; line-height: 1.6; color: var(--navy); }
+.facts { margin: 0; border-top: 2px solid var(--navy); align-self: start; }
+.facts div { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+.facts dt { font-size: .85rem; color: var(--slate); }
+.facts dd { margin: .15rem 0 0; font-weight: 600; color: var(--navy); }
+
+/* Experience: a real sequence, so a timeline */
+.jobs { list-style: none; margin: 0; padding: 0; position: relative; }
+.jobs li { display: grid; gap: .3rem 2.5rem; padding: 0 0 2.2rem 1.75rem; position: relative; }
+.jobs li::before { content: ""; position: absolute; left: 0; top: .45rem; width: .65rem; height: .65rem; border-radius: 50%; background: var(--white); border: 2px solid var(--navy); }
+.jobs li:first-child::before { background: var(--gold); border-color: var(--gold); }
+.jobs li::after { content: ""; position: absolute; left: calc(.325rem - 1px); top: 1.35rem; bottom: .2rem; width: 2px; background: var(--rule); }
+.jobs li:last-child { padding-bottom: 0; }
+.jobs li:last-child::after { display: none; }
+@media (min-width: 52rem) { .jobs li { grid-template-columns: 9.5rem minmax(0, 1fr); padding-left: 0; } .jobs li::before { left: 10.6rem; } .jobs li::after { left: calc(10.6rem + .325rem - 1px); } .jobs li > div { padding-left: 2rem; } }
+.jobs .when { font-weight: 600; color: var(--slate); font-variant-numeric: tabular-nums; font-size: .95rem; padding-top: .1rem; }
+.jobs h3 { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; line-height: 1.35; margin: 0; color: var(--navy); }
+.jobs .org { margin: .1rem 0 .45rem; color: var(--slate); font-size: .97rem; }
+.jobs p.what { margin: 0; max-width: 64ch; }
+
+/* Skills */
+.skills { display: grid; gap: 0 3rem; margin: 0; }
+@media (min-width: 48rem) { .skills { grid-template-columns: 1fr 1fr; } }
+.skills div { padding: 1.1rem 0; border-top: 1px solid var(--rule); }
+.skills dt { font-family: var(--serif); font-weight: 700; color: var(--navy); font-size: 1.05rem; }
+.skills dd { margin: .3rem 0 0; color: var(--ink); }
+.tools { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; padding: 0; margin: .5rem 0 0; }
+.tools li { background: var(--white); border: 1px solid var(--rule); padding: .25rem .6rem; border-radius: 2px; font-size: .9rem; font-weight: 500; color: var(--navy); }
+
+/* Projects */
+.projects { display: grid; gap: 1.5rem; }
+@media (min-width: 48rem) { .projects { grid-template-columns: 1fr 1fr; } }
+.project { display: block; text-decoration: none; color: inherit; border: 1px solid var(--rule); border-top: 4px solid var(--navy); padding: 1.5rem 1.5rem 1.6rem; background: var(--white); }
+.project:hover { border-top-color: var(--gold); color: inherit; }
+.project h3 { font-family: var(--serif); font-weight: 700; font-size: 1.3rem; margin: 0 0 .4rem; color: var(--navy); }
+.project p { margin: 0 0 1rem; }
+.project .go { font-weight: 600; color: var(--navy-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+/* Contact */
+.contact { background: var(--navy); color: var(--white); }
+.contact h2 { color: var(--white); }
+.contact .sec-head p { color: #C9D2E0; }
+.contact .grid { display: grid; gap: 2.5rem 4rem; }
+@media (min-width: 56rem) { .contact .grid { grid-template-columns: minmax(0, 1fr) 20rem; align-items: start; } }
+.email { font-family: var(--display); font-size: clamp(1.7rem, 1.1rem + 2.6vw, 2.8rem); color: var(--white); background: none; border: 0; padding: 0; cursor: pointer; text-align: left; border-bottom: 2px solid var(--gold); line-height: 1.25; overflow-wrap: anywhere; }
+.email:hover { color: var(--gold); }
+.copied { display: block; margin-top: .6rem; color: var(--gold); font-weight: 600; min-height: 1.6em; }
+.contact .actions { margin-top: 1.4rem; }
+.social { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,.2); }
+.social li { border-bottom: 1px solid rgba(255,255,255,.2); }
+.social a { display: flex; justify-content: space-between; padding: .75rem 0; color: #E6EAF1; text-decoration: none; }
+.social a span { color: #A9B5C8; }
+.social a:hover, .social a:hover span { color: var(--gold); }
+footer { background: #0F1A31; color: #8D9AB0; font-size: .9rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; padding-block: 1.4rem 2rem; }
+footer a { color: #C9D2E0; }
 </style>
+<script>document.documentElement.className = 'js';</script>
 </head>
 <body>
-<header><div class="wrap head">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="badge" role="img" aria-label="Round badge: Treat arms ringed by Joshua A. Treat, 1989">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar-top"><div class="wrap">
+<a class="mark" href="#top"><img src="favicon.svg" alt="" width="26" height="31">Josh Treat</a>
+<nav aria-label="Sections">
+<a href="#results">Results</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+<a class="cta" href="Joshua_A_Treat_Resume.pdf">Resume</a>
+</nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+<div>
+<h1>Josh Treat</h1>
+<p class="title">Campaign manager and political strategist. Thirteen years running state and federal races, from a first field job in Iowa to a governor's race.</p>
+<p class="where">Based in Lincolnville, Maine, and willing to relocate.</p>
+<div class="actions">
+<a class="btn btn-gold" href="Joshua_A_Treat_Resume.pdf"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg>Download resume</a>
+<a class="btn btn-line" href="#contact">Get in touch</a>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="badge" width="336" height="336" role="img" aria-label="Round badge: Treat arms ringed by Joshua A. Treat, 1989">
     <defs>
       <clipPath id="shieldClip2"><path d="M4 4H96V56C96 86 76 106 50 116C24 106 4 86 4 56Z"/></clipPath>
       <path id="arcTop" d="M92 512A420 420 0 0 1 932 512" fill="none"/>
@@ -96,59 +223,150 @@ footer { border-top: 1px solid var(--rule); padding-block: 1.5rem 2.5rem; font-f
       <path d="M4 4H96V56C96 86 76 106 50 116C24 106 4 86 4 56Z" fill="none" stroke="#141414" stroke-width="1.6" stroke-linejoin="round"/>
     </svg>
   </svg>
-<div>
-<h1>Joshua A. Treat</h1>
-<p class="role">Campaign manager and political strategist. Lincolnville, Maine.</p>
-</div>
-</div></header>
+</div></div>
 
-<main class="wrap">
+<main id="main">
+<section id="results"><div class="wrap">
+<div class="sec-head">
+<h2>Results</h2>
+<p>Close races, decided by turnout. Certified results from campaigns I managed or helped lead.</p>
+</div>
+<div class="board">
+<article class="race">
+<div><div class="yr">2026</div><h3>Iowa governor, Republican primary</h3><p class="role">Senior advisor to Zach Lahn</p></div>
+<div><div class="tally" role="img" aria-label="Lahn 37.8%, runner-up 37.0%">
+<div class="row us" aria-hidden="true"><span class="who">Lahn</span><span class="track"><span class="fill" style="--w:37.8%"></span></span><span class="pct">37.8%</span></div>
+<div class="row them" aria-hidden="true"><span class="who">Runner-up</span><span class="track"><span class="fill" style="--w:37.0%"></span></span><span class="pct">37.0%</span></div>
+</div><p class="note">Won a five-way primary over a sitting U.S. congressman and cleared the 35% threshold to win outright.</p></div>
+</article>
+<article class="race">
+<div><div class="yr">2022</div><h3>Iowa’s 3rd District, U.S. House</h3><p class="role">Campaign manager for Zach Nunn</p></div>
+<div><div class="tally" role="img" aria-label="Nunn 50.3%, incumbent 49.7%">
+<div class="row us" aria-hidden="true"><span class="who">Nunn</span><span class="track"><span class="fill" style="--w:50.3%"></span></span><span class="pct">50.3%</span></div>
+<div class="row them" aria-hidden="true"><span class="who">Incumbent</span><span class="track"><span class="fill" style="--w:49.7%"></span></span><span class="pct">49.7%</span></div>
+</div><p class="note">Unseated a two-term incumbent by <b>2,066 votes</b>, with a turnout program that ran up margins in 20 of 21 counties.</p></div>
+</article>
+<article class="race">
+<div><div class="yr">2018</div><h3>Massachusetts governor</h3><p class="role">Field program for Gov. Charlie Baker’s re-election</p></div>
+<div><div class="tally" role="img" aria-label="Baker 67%, opponent 33%">
+<div class="row us" aria-hidden="true"><span class="who">Baker</span><span class="track"><span class="fill" style="--w:67%"></span></span><span class="pct">67%</span></div>
+<div class="row them" aria-hidden="true"><span class="who">Opponent</span><span class="track"><span class="fill" style="--w:33%"></span></span><span class="pct">33%</span></div>
+</div><p class="note">Managed regional field directors statewide on weekly goals, caucus targets and turnout reporting.</p></div>
+</article>
+<article class="race">
+<div><div class="yr">2014</div><h3>Iowa’s 3rd District, U.S. House</h3><p class="role">Political director for David Young</p></div>
+<div><div class="tally" role="img" aria-label="Young 53%, opponent 42%">
+<div class="row us" aria-hidden="true"><span class="who">Young</span><span class="track"><span class="fill" style="--w:53%"></span></span><span class="pct">53%</span></div>
+<div class="row them" aria-hidden="true"><span class="who">Opponent</span><span class="track"><span class="fill" style="--w:42%"></span></span><span class="pct">42%</span></div>
+</div><p class="note">Directed field staff to 50,000+ voter contacts and built the turnout program behind a 10-point win.</p></div>
+</article>
+</div>
+<p class="fine">Vote shares are from certified returns; the 2026 primary share is Zach Lahn's against the second-place finisher in a five-way field.</p>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap">
+<div class="sec-head"><h2>About</h2></div>
+<div class="about">
 <div class="prose">
-<h2>About</h2>
-<p>I have run state and federal campaigns since 2013: U.S. House, U.S. Senate and governor's races, from a first field job in Iowa to managing a $2.6 million congressional campaign and advising a statewide one. The work is the same at every level. Set the targets, build the program that reaches the voters who decide the race, hire people who can execute it, and keep the plan honest week by week.</p>
-<p>Most of what I know is about turnout and persuasion in close races, delegate and convention strategy, and building a campaign from nothing. Lately that has included producing short-form video and interactive web content, and building <a href="https://jatreat.github.io/votes-to-win/">Votes to Win</a>, a campaign-planning web app for first-time candidates.</p>
-<p>I grew up acting and once planned to study film, which still shows in how I think about a message. When I'm not on a campaign I'm in Maine, where my family has been since the 1750s.</p>
-
-<h2>Work</h2>
-<ul class="work">
-<li><span class="when">2025 – present</span><div><b>Senior Advisor, Lahn for Governor</b> (Iowa)<p>Strategy, targets and weekly plans for a first-time candidate building a statewide campaign from zero; won a five-way primary over a sitting congressman, and now directing general-election strategy and voter targeting.</p></div></li>
-<li><span class="when">2023 – 2025</span><div><b>Between campaigns</b> (Pine Island Camp, Maine)<p>Fundraising, donor relations and the donor database for a nonprofit summer camp, with a seasonal staff of 40.</p></div></li>
-<li><span class="when">2022</span><div><b>Campaign Manager, Iowans for Zach Nunn</b> (IA-03, U.S. House)<p>Built and ran a $2.6 million campaign that unseated a two-term incumbent by 2,066 votes, with a turnout model and field program that ran up margins in 20 of 21 counties.</p></div></li>
-<li><span class="when">2017 – 2021</span><div><b>Campaign Manager and Political Director, Massachusetts Red Grassroots Action and John Kingston for U.S. Senate</b> (Boston)<p>Managed regional field directors statewide for Gov. Baker's 2018 re-election; designed the delegate strategy that put Kingston on the Senate primary ballot; built a field data system the state party later adopted.</p></div></li>
-<li><span class="when">2016 – 2017</span><div><b>Campaign Manager, then District Director, Claudia Tenney for Congress</b> (NY-22)<p>Ran a seven-point win with eight staff and forty interns across seven county offices, then ran the district office.</p></div></li>
-<li><span class="when">2013 – 2014</span><div><b>Earlier campaigns</b><p>Political Director, Young for Iowa (IA-03); Deputy Campaign Manager, Schultz for Iowa; intern at FP1 Strategies in Washington.</p></div></li>
-</ul>
-
-<h2>Education</h2>
-<p>B.A., Psychology, University of Maine, Orono.</p>
+<p>I have run state and federal campaigns since 2013: U.S. House, U.S. Senate and governor's races, from a first field job in Iowa to managing a $2.6 million congressional campaign and advising a statewide one.</p>
+<p>The work is the same at every level. Set the targets, build the program that reaches the voters who decide the race, hire people who can execute it, and keep the plan honest week by week. Most of what I know is about turnout and persuasion in close races, delegate and convention strategy, and building a campaign from nothing.</p>
+<p>Lately that has included producing short-form video and interactive web content, and building <a href="https://jatreat.github.io/votes-to-win/">Votes to Win</a>, a campaign-planning web app for first-time candidates. I grew up acting and once planned to study film, which still shows in how I think about a message. When I'm not on a campaign I'm in Maine, where my family has been since the 1750s.</p>
 </div>
-
-<aside>
-<dl>
-<dt>Email</dt><dd><button class="copy" type="button" id="copy-email" data-value="jatreat@me.com">jatreat@me.com</button> <span id="copied" hidden>copied</span></dd>
-<dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/joshtreat">linkedin.com/in/joshtreat</a></dd>
-<dt>Strava</dt><dd><a href="https://www.strava.com/athletes/142055860">Josh Treat on Strava</a></dd>
-<dt>Instagram</dt><dd><a href="https://www.instagram.com/jatreat89/">@jatreat89</a></dd>
-<dt>X</dt><dd><a href="https://x.com/jatreat">@jatreat</a></dd>
-<dt>Facebook</dt><dd><a href="https://www.facebook.com/share/19ZPJny1hU/">Josh Treat on Facebook</a></dd>
-<dt>Based in</dt><dd>Lincolnville, Maine; willing to relocate</dd>
-<dt>Projects</dt><dd><a href="https://jatreat.github.io/votes-to-win/">Votes to Win</a><br><a href="https://pitminsterchurchonline.org">Friends of Pitminster</a></dd>
+<dl class="facts">
+<div><dt>Campaigns since</dt><dd>2013</dd></div>
+<div><dt>Largest budget managed</dt><dd>$2.6 million</dd></div>
+<div><dt>Staffs led</dt><dd>5 to 40+</dd></div>
+<div><dt>Education</dt><dd>B.A., Psychology, University of Maine</dd></div>
+<div><dt>Based in</dt><dd>Lincolnville, Maine</dd></div>
 </dl>
-<a class="btn" href="Joshua_A_Treat_Resume.pdf">Download the resume (PDF)</a>
-</aside>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<div class="sec-head"><h2>Experience</h2></div>
+<ol class="jobs" reversed>
+<li><span class="when">2025 – now</span><div><h3>Senior Advisor</h3><p class="org">Lahn for Governor, Iowa</p><p class="what">Strategy, targets and weekly plans for a first-time candidate building a statewide campaign from zero; won a five-way primary over a sitting congressman, and now directing general-election strategy and voter targeting.</p></div></li>
+<li><span class="when">2023 – 2025</span><div><h3>Between campaigns</h3><p class="org">Pine Island Camp, Maine</p><p class="what">Fundraising, donor relations and the donor database for a nonprofit summer camp, with a seasonal staff of 40.</p></div></li>
+<li><span class="when">2022</span><div><h3>Campaign Manager</h3><p class="org">Iowans for Zach Nunn, IA-03, U.S. House</p><p class="what">Built and ran a $2.6 million campaign that unseated a two-term incumbent by 2,066 votes, with a turnout model and field program that ran up margins in 20 of 21 counties.</p></div></li>
+<li><span class="when">2017 – 2021</span><div><h3>Campaign Manager and Political Director</h3><p class="org">Massachusetts Red Grassroots Action and John Kingston for U.S. Senate, Boston</p><p class="what">Managed regional field directors statewide for Gov. Baker’s 2018 re-election; designed the delegate strategy that put Kingston on the Senate primary ballot; built a field data system the state party later adopted.</p></div></li>
+<li><span class="when">2016 – 2017</span><div><h3>Campaign Manager, then District Director</h3><p class="org">Claudia Tenney for Congress, NY-22</p><p class="what">Ran a seven-point win with eight staff and forty interns across seven county offices, then ran the district office.</p></div></li>
+<li><span class="when">2013 – 2014</span><div><h3>Earlier campaigns</h3><p class="org">Iowa and Washington, D.C.</p><p class="what">Political Director, Young for Iowa (IA-03); Deputy Campaign Manager, Schultz for Iowa; intern at FP1 Strategies in Washington.</p></div></li>
+</ol>
+</div></section>
+
+<section id="skills" class="alt"><div class="wrap">
+<div class="sec-head"><h2>What I bring</h2></div>
+<dl class="skills">
+<div><dt>Campaign strategy</dt><dd>State and federal campaign management, voter targeting and turnout modeling, delegate and convention strategy, weekly goals and reporting.</dd></div>
+<div><dt>Public affairs and advocacy</dt><dd>Grassroots organizing, coalitions with party and community partners, paid, earned and social media, press relations, event production.</dd></div>
+<div><dt>Fundraising and content</dt><dd>Candidate and PAC fundraising events, major donors, small-dollar online programs; short-form video, interactive web content and games.</dd></div>
+<div><dt>Leadership</dt><dd>Staffs of 5 to 40+, budgets up to $2.6 million, vendor management, public speaking.</dd></div>
+<div><dt>Data and tools</dt><dd>
+<ul class="tools">
+<li>i360</li><li>GOP Data Center</li><li>NationBuilder</li><li>WinRed</li><li>Anedot</li><li>Advantage</li><li>Mailchimp</li><li>Constant Contact</li><li>Microsoft Office</li><li>Google Workspace</li><li>AI tools</li>
+</ul></dd></div>
+</dl>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<div class="sec-head"><h2>Projects</h2></div>
+<div class="projects">
+<a class="project" href="https://jatreat.github.io/votes-to-win/">
+<h3>Votes to Win</h3>
+<p>A campaign-planning web app for first-time candidates: a free win-number calculator and a full campaign plan built from the district's own numbers.</p>
+<span class="go">Open Votes to Win</span>
+</a>
+<a class="project" href="https://pitminsterchurchonline.org">
+<h3>Friends of Pitminster</h3>
+<p>A community site for the Somerset village church my family left in the 1630s: its history, the families who sailed from it, and a family wall.</p>
+<span class="go">Visit the site</span>
+</a>
+</div>
+</div></section>
 </main>
 
-<footer><div class="wrap">Joshua A. Treat · joshtreat.com</div></footer>
+<section id="contact" class="contact"><div class="wrap">
+<div class="sec-head">
+<h2>Get in touch</h2>
+<p>For campaigns, consulting or a conversation about a role, email is fastest.</p>
+</div>
+<div class="grid">
+<div>
+<button class="email" type="button" id="copy-email" data-value="jatreat@me.com" aria-describedby="copied">jatreat@me.com</button>
+<span class="copied" id="copied" aria-live="polite"></span>
+<div class="actions">
+<a class="btn btn-gold" href="mailto:jatreat@me.com">Send an email</a>
+<a class="btn btn-line" href="Joshua_A_Treat_Resume.pdf">Resume (PDF)</a>
+</div>
+</div>
+<ul class="social" aria-label="Elsewhere">
+<li><a href="https://www.linkedin.com/in/joshtreat">LinkedIn <span>/in/joshtreat</span></a></li>
+<li><a href="https://x.com/jatreat">X <span>@jatreat</span></a></li>
+<li><a href="https://www.instagram.com/jatreat89/">Instagram <span>@jatreat89</span></a></li>
+<li><a href="https://www.facebook.com/share/19ZPJny1hU/">Facebook <span>Josh Treat</span></a></li>
+<li><a href="https://www.strava.com/athletes/142055860">Strava <span>Josh Treat</span></a></li>
+</ul>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<span>© 2026 Joshua A. Treat</span>
+<span><a href="https://treatfamily.org">The Treat Family</a></span>
+</div></footer>
+
 <script>
 (function(){
-  var b=document.getElementById('copy-email'), c=document.getElementById('copied');
-  if(!b) return;
-  b.addEventListener('click', function(){
-    var v=b.getAttribute('data-value');
-    function done(){ c.hidden=false; setTimeout(function(){ c.hidden=true; }, 1800); }
-    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(done, function(){ window.getSelection().selectAllChildren(b); }); }
-    else { window.getSelection().selectAllChildren(b); }
+  var b = document.getElementById('copy-email'), c = document.getElementById('copied');
+  if (b) b.addEventListener('click', function(){
+    var v = b.getAttribute('data-value');
+    function done(){ c.textContent = 'Copied to your clipboard'; setTimeout(function(){ c.textContent = ''; }, 2200); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(done, function(){ location.href = 'mailto:' + v; });
+    else location.href = 'mailto:' + v;
   });
+  var races = document.querySelectorAll('.race');
+  if (!('IntersectionObserver' in window)) { races.forEach(function(r){ r.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .35 });
+  races.forEach(function(r){ io.observe(r); });
 })();
 </script>
 </body>
