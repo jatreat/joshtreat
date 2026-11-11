@@ -167,14 +167,11 @@ html.js .race.in .row.them .fill { transition-delay: .15s; }
 .project .go { font-weight: 600; color: var(--navy-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
 /* Contact */
-.contact { background: var(--navy); color: var(--white); position: relative; isolation: isolate; overflow: hidden; }
-/* Contact picture: section roads at dusk, for the Iowa half of the map. */
-.contact::before { content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(90deg, rgba(20,33,61,.93) 0%, rgba(20,33,61,.82) 50%, rgba(20,33,61,.7) 100%), url("img/grid-2000.jpg") center / cover no-repeat;
-  background: linear-gradient(90deg, rgba(20,33,61,.93) 0%, rgba(20,33,61,.82) 50%, rgba(20,33,61,.7) 100%), image-set(url("img/grid-2000.webp") type("image/webp"), url("img/grid-2000.jpg") type("image/jpeg")) center / cover no-repeat; }
-@media (max-width: 55.99rem) { .contact::before {
-  background: linear-gradient(rgba(20,33,61,.88), rgba(20,33,61,.88)), url("img/grid-1000.jpg") center / cover no-repeat;
-  background: linear-gradient(rgba(20,33,61,.88), rgba(20,33,61,.88)), image-set(url("img/grid-1000.webp") type("image/webp"), url("img/grid-1000.jpg") type("image/jpeg")) center / cover no-repeat; } }
+.contact { background: var(--navy) url("img/grid-2000.jpg") center / cover no-repeat; color: var(--white); position: relative; isolation: isolate; overflow: hidden; }
+@media (max-width: 55.99rem) { .contact { background: var(--navy) url("img/grid-1000.jpg") center / cover no-repeat; } }
+/* Contact picture: section roads at dusk, for the Iowa half of the map. The video sits over the still, the navy wash over both. */
+.contact::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(20,33,61,.93) 0%, rgba(20,33,61,.82) 50%, rgba(20,33,61,.7) 100%); }
+@media (max-width: 55.99rem) { .contact::before { background: rgba(20,33,61,.88); } }
 .contact h2 { color: var(--white); }
 .contact .sec-head p { color: #C9D2E0; }
 .contact .grid { display: grid; gap: 2.5rem 4rem; }
@@ -351,7 +348,9 @@ footer a { color: #C9D2E0; }
 </div></section>
 </main>
 
-<section id="contact" class="contact"><div class="wrap">
+<section id="contact" class="contact">
+<video class="bgvid" autoplay muted loop playsinline preload="none" poster="img/grid-2000.jpg" aria-hidden="true" tabindex="-1"><source src="img/grid-loop.mp4" type="video/mp4"></video>
+<div class="wrap">
 <div class="sec-head">
 <h2>Get in touch</h2>
 <p>For campaigns, consulting or a conversation about a role, email is fastest.</p>
