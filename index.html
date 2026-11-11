@@ -18,8 +18,6 @@
 <meta name="twitter:image" content="https://joshtreat.com/img/share-card.jpg">
 <meta name="theme-color" content="#14213D">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/coast-2000.webp" type="image/webp" media="(min-width: 56rem)">
-<link rel="preload" as="image" href="img/coast-1000.webp" type="image/webp" media="(max-width: 55.99rem)">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Joshua A. Treat","alternateName":"Josh Treat","url":"https://joshtreat.com/","jobTitle":"Campaign manager and political strategist","address":{"@type":"PostalAddress","addressLocality":"Lincolnville","addressRegion":"ME","addressCountry":"US"},"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Maine"},"sameAs":["https://www.linkedin.com/in/joshtreat","https://www.strava.com/athletes/142055860","https://www.instagram.com/jatreat89/","https://x.com/jatreat","https://www.facebook.com/share/19ZPJny1hU/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Cinzel:wght@600&display=swap">
@@ -67,24 +65,17 @@ a:hover { color: var(--gold-ink); }
 @media (max-width: 44rem) { .bar-top nav a:not(.cta) { display: none; } }
 
 /* Hero */
-.hero { background: var(--navy); color: var(--white); position: relative; overflow: hidden; isolation: isolate; }
+.hero { background: var(--navy) url("img/coast-2000.jpg") right bottom / cover no-repeat; color: var(--white); position: relative; overflow: hidden; isolation: isolate; }
+@media (max-width: 55.99rem) { .hero { background: var(--navy) url("img/coast-1000.jpg") 88% bottom / cover no-repeat; } }
 /* Hero picture: a Maine shore at blue hour. The navy wash keeps the name and the buttons at full contrast. */
-.hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background:
     linear-gradient(90deg, rgba(20,33,61,.92) 0%, rgba(20,33,61,.62) 45%, rgba(20,33,61,.15) 100%),
-    linear-gradient(180deg, rgba(20,33,61,.55) 0%, rgba(20,33,61,0) 35%),
-    url("img/coast-2000.jpg") right bottom / cover no-repeat;
-  background:
-    linear-gradient(90deg, rgba(20,33,61,.92) 0%, rgba(20,33,61,.62) 45%, rgba(20,33,61,.15) 100%),
-    linear-gradient(180deg, rgba(20,33,61,.55) 0%, rgba(20,33,61,0) 35%),
-    image-set(url("img/coast-2000.webp") type("image/webp"), url("img/coast-2000.jpg") type("image/jpeg")) right bottom / cover no-repeat; }
-@media (max-width: 55.99rem) { .hero::before {
-  background:
-    linear-gradient(180deg, rgba(20,33,61,.9) 0%, rgba(20,33,61,.7) 55%, rgba(20,33,61,.25) 100%),
-    url("img/coast-1000.jpg") 88% bottom / cover no-repeat;
-  background:
-    linear-gradient(180deg, rgba(20,33,61,.9) 0%, rgba(20,33,61,.7) 55%, rgba(20,33,61,.25) 100%),
-    image-set(url("img/coast-1000.webp") type("image/webp"), url("img/coast-1000.jpg") type("image/jpeg")) 88% bottom / cover no-repeat; } }
+    linear-gradient(180deg, rgba(20,33,61,.55) 0%, rgba(20,33,61,0) 35%); }
+@media (max-width: 55.99rem) { .hero::before { background: linear-gradient(180deg, rgba(20,33,61,.9) 0%, rgba(20,33,61,.7) 55%, rgba(20,33,61,.25) 100%); } }
+.bgvid { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: right bottom; pointer-events: none; }
+@media (max-width: 55.99rem) { .hero .bgvid { object-position: 88% bottom; } }
+.contact .bgvid { object-position: center; }
+@media (prefers-reduced-motion: reduce) { .bgvid { display: none; } }
 .hero::after { content: ""; position: absolute; inset: auto 0 0 0; height: 4px; background: var(--gold); }
 .hero .wrap { display: grid; gap: 2.5rem; align-items: center; padding-block: clamp(3rem, 2rem + 5vw, 6.5rem) clamp(3.5rem, 2rem + 5vw, 6.5rem); }
 @media (min-width: 56rem) { .hero .wrap { grid-template-columns: minmax(0, 1fr) 21rem; gap: 4rem; } }
@@ -217,7 +208,9 @@ footer a { color: #C9D2E0; }
 </nav>
 </div></header>
 
-<div class="hero" id="top"><div class="wrap">
+<div class="hero" id="top">
+<video class="bgvid" autoplay muted loop playsinline preload="metadata" poster="img/coast-2000.jpg" aria-hidden="true" tabindex="-1"><source src="img/coast-loop.mp4" type="video/mp4"></video>
+<div class="wrap">
 <div>
 <h1>Josh Treat</h1>
 <p class="title">Campaign manager and political strategist. Thirteen years running state and federal races, from a first field job in Iowa to a governor's race.</p>
